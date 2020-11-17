@@ -1,5 +1,9 @@
+<div class="container">
 
 <h2><%= @article.title %></h2>
 <p><%= @article.content %></p>
 
-<%= link_to "Articles List", articles_path %>
+<%= link_to 'Edit', edit_article_path(@article), :class => "btn btn-primary" %><br><br>
+<%= link_to "Articles List", articles_path, :class => "btn btn-primary" %><br><br>
+<%= link_to "Delete", article_path(@article), method: :delete, :class => "btn btn-danger" %><br>
+</div>
